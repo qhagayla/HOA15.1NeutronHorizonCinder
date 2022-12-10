@@ -1,0 +1,13 @@
+---
+
+- hosts: horizon_servers
+  become: true
+  tasks:
+
+  - name: Install Horizon Package (Ubuntu)
+    tags: horizon
+    apt:
+      name:
+        - openstack-dashboard
+      state: latest
+    when: ansible_distribution == "Ubuntu"

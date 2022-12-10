@@ -1,0 +1,8 @@
+[remote_servers]
+192.168.56.102
+[neutron_servers]
+192.168.56.102
+[horizon_servers]
+192.168.56.102
+[cinder_servers]
+192.168.56.102

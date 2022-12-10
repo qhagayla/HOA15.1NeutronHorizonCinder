@@ -1,0 +1,14 @@
+---
+
+- hosts: cinder_servers
+  become: true
+  tasks:
+
+  - name: Install Cinder Package (Ubuntu)
+    tags: cinder
+    apt:
+      name:
+        - cinder-volume
+        - python3-mysqldb
+      state: latest
+    when: ansible_distribution == "Ubuntu"
